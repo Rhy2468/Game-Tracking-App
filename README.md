@@ -1,7 +1,10 @@
 This was a school project (CMPT-276), however, due to the shutdown of SFU Gitlab, I was not able to port over the project with GitHub commit history or any Git data. 
 This was done in a small group of 4 members. We developed the project with Android Studio and JUnit 5 Testing, utilizing Agile Methodologies and roles. 
 Here is some notable data:
-![image](https://github.com/Rhy2468/GameTracker/assets/113131005/e9b8cb88-2713-4709-a85d-bc63afb58b86)
-![image](https://github.com/Rhy2468/GameTracker/assets/113131005/379827b6-19a5-4b3c-bec1-2da544666606)
-![image](https://github.com/Rhy2468/GameTracker/assets/113131005/96bd7a59-44bb-465b-b1b5-3e27d40ea2ef)
+![image](https://github.com/Rhy2468/Game-Tracking-App/assets/113131005/01b5d83b-b7e4-41b4-a52c-ecff97b8a9fb)
+![image](https://github.com/Rhy2468/Game-Tracking-App/assets/113131005/90cecd69-c2c4-4699-94fc-9f846ddaf146)
+![image](https://github.com/Rhy2468/Game-Tracking-App/assets/113131005/0bf52bd0-a106-4c8d-96c4-dc7b87ccd63e)
+
+
+
 
