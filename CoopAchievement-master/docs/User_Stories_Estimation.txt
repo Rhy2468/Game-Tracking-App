@@ -1,0 +1,6 @@
+Work (1 Unit) = A day's amount of work 
+Game Played Difficulty: Add a difficulty feature with levels (easy, normal, hard) to achievements screens and games (Estimation: 2 Work) 
+Achievement Improvements: Add an animation when achievment level is earned and 3 diffierent non-gametype specific themes (Estimation: 1 Work) 
+Edit Game Played: Add ability to edit player scores and difficulty errors to edit game page for any past game (Estimation: 1 Work) 
+Friendly UI: Make UI look friendly and good looking by adding background images, etc. (Estimation: 0.5 Work) 
+Score Calculator: Change add/modify game screen to allow user to enter individual player scores, app should ask # of players, keep track of individual scores, etc. (Estimation: 3 Work) 

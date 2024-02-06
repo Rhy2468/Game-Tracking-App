@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
+    tools:context=".AchievementCelebrationActivity">
+
+    <ImageView
+        android:id="@+id/ivPGToAchieve"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/pbNextAchievement"
+        app:layout_constraintTop_toBottomOf="@+id/tvNextAchieveReq"
+        app:srcCompat="@drawable/animal1" />
+
+    <TextView
+        android:id="@+id/tvAchievementTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACHIEVMENT"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <TextView
+        android:id="@+id/tvTeamScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAchievementTitle" />
+
+    <TextView
+        android:id="@+id/tvNextAchieveReq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeamScore" />
+
+    <ProgressBar
+        android:id="@+id/pbNextAchievement"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="283dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNextAchieveReq" />
+
+    <Button
+        android:id="@+id/btnAchieveOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/change_theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibAchievementIcon"
+        android:layout_width="190dp"
+        android:layout_height="193dp"
+        android:layout_marginBottom="20dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/tvAchievementTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/c1" />
+
+    <ImageView
+        android:id="@+id/ivPGAchieved"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/pbNextAchievement"
+        app:layout_constraintTop_toBottomOf="@+id/tvNextAchieveReq"
+        app:srcCompat="@drawable/animal1" />
+
+    <TextView
+        android:id="@+id/tvNextAchieveName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pbNextAchievement" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

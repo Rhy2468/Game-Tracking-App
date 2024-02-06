@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
+    tools:context=".ModifyGameActivity">
+
+    <TextView
+        android:id="@+id/tvSelectGameIcon2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/achievement_levels"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/etNumPlayers"
+        android:layout_width="158dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="2"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNumPlayerInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvNumPlayerInput"
+        app:layout_constraintVertical_bias="0.892"
+        tools:ignore="LabelFor" />
+
+    <View
+        android:id="@+id/divider18"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        android:backgroundTint="#E7E7E7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView_achievement_levels"
+        app:layout_constraintVertical_bias="0.168" />
+
+    <TextView
+        android:id="@+id/tvAchievementLevelReached"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/achievement_level_reached"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/divider18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider18"
+        app:layout_constraintVertical_bias="0.246" />
+
+    <TextView
+        android:id="@+id/tvAchievementLevelResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/empty_dash"
+        android:textAllCaps="true"
+        android:textColor="#EC407A"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAchievementLevelReached" />
+
+    <TextView
+        android:id="@+id/tvNumPlayerInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/num_players"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider18" />
+
+    <Spinner
+        android:id="@+id/spinner_dropdown"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="10dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/divider18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listView_achievement_levels" />
+
+    <TextView
+        android:id="@+id/tvNumScoreInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/sum_scores"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvNumPlayerInput"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumPlayerInput" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="230dp"
+        android:layout_height="5dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tvSelectGameIcon2"
+        app:layout_constraintStart_toStartOf="@+id/tvSelectGameIcon2"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectGameIcon2" />
+
+    <ListView
+        android:id="@+id/listView_achievement_levels"
+        android:layout_width="365dp"
+        android:layout_height="202dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        android:listSelector="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4"
+        app:layout_constraintVertical_bias="0.0">
+
+    </ListView>
+
+    <View
+        android:id="@+id/divider19"
+        android:layout_width="373dp"
+        android:layout_height="4dp"
+        android:background="@color/black"
+        android:backgroundTint="#0288D1"
+        app:layout_constraintBottom_toTopOf="@+id/listView_achievement_levels"
+        app:layout_constraintEnd_toEndOf="@+id/listView_achievement_levels"
+        app:layout_constraintStart_toStartOf="@+id/listView_achievement_levels" />
+
+    <View
+        android:id="@+id/divider26"
+        android:layout_width="373dp"
+        android:layout_height="4dp"
+        android:background="@color/black"
+        android:backgroundTint="#0288D1"
+        app:layout_constraintEnd_toEndOf="@+id/listView_achievement_levels"
+        app:layout_constraintStart_toStartOf="@+id/listView_achievement_levels"
+        app:layout_constraintTop_toBottomOf="@+id/listView_achievement_levels" />
+
+    <View
+        android:id="@+id/divider27"
+        android:layout_width="4dp"
+        android:layout_height="210dp"
+        android:background="@color/black"
+        android:backgroundTint="#0288D1"
+        app:layout_constraintBottom_toTopOf="@+id/divider26"
+        app:layout_constraintEnd_toStartOf="@+id/listView_achievement_levels"
+        app:layout_constraintTop_toBottomOf="@+id/divider19" />
+
+    <View
+        android:id="@+id/divider28"
+        android:layout_width="4dp"
+        android:layout_height="210dp"
+        android:background="@color/black"
+        android:backgroundTint="#0288D1"
+        app:layout_constraintBottom_toTopOf="@+id/divider26"
+        app:layout_constraintStart_toEndOf="@+id/listView_achievement_levels"
+        app:layout_constraintTop_toBottomOf="@+id/divider19" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/set_difficulty"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider18"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_dropdown"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider26" />
+
+    <Button
+        android:id="@+id/btnPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Players"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNumScoreInput"
+        app:layout_constraintEnd_toEndOf="@+id/etNumPlayers"
+        app:layout_constraintStart_toStartOf="@+id/etNumPlayers"
+        app:layout_constraintTop_toTopOf="@+id/tvNumScoreInput" />
+
+    <TextView
+        android:id="@+id/tvSumScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/total_score"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayers" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

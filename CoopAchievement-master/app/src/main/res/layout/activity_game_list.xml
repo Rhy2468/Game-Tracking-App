@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/appbackground"
+    android:layout_height="match_parent"
+    tools:context=".GameTypeActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDisplayGames"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddNewGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/btn_add_new_game"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnViewLevel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEmptyGameArrayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_array_desc"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rvDisplayGames"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rvDisplayGames"
+        app:layout_constraintTop_toTopOf="@+id/rvDisplayGames" />
+
+    <EditText
+        android:id="@+id/inputGameTypeTitle"
+        android:layout_width="256dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#00000000"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/et_title_placeholder"
+        android:textColor="@color/white"
+        android:maxLength="15"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor"
+        android:importantForAutofill="no" />
+
+    <ImageView
+        android:id="@+id/ivEmptyGameArrayArrow"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddNewGame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmptyGameArrayText"
+        app:srcCompat="@drawable/ic_baseline_arrow_downward_24"
+        tools:visibility="gone"
+        android:contentDescription="@string/empty_arrow" />
+
+    <View
+        android:id="@+id/divGameTitle"
+        android:layout_width="276dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/rvDisplayGames"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.853" />
+
+    <View
+        android:id="@+id/divGameTitleRed"
+        android:layout_width="276dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/black"
+        android:backgroundTint="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rvDisplayGames"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.853"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnEditGameConfigEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#2196F3"
+        android:text="@string/btn_edit"
+        app:layout_constraintBottom_toBottomOf="@+id/inputGameTypeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputGameTypeTitle" />
+
+    <Button
+        android:id="@+id/btnEditGameConfigSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#EF4040"
+        android:text="@string/btn_save"
+        app:layout_constraintBottom_toBottomOf="@+id/inputGameTypeTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inputGameTypeTitle" />
+
+    <EditText
+        android:id="@+id/etEditGameConfigPoorScore"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:background="#00000000"
+        android:ems="10"
+        android:maxLength="6"
+        android:textColor="@color/white"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/etEditGameConfigGreatScore"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etEditGameConfigGreatScore"
+        app:layout_constraintTop_toBottomOf="@+id/etEditGameConfigGreatScore"
+        tools:ignore="LabelFor"
+        android:importantForAutofill="no" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/poor_score_title"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/etEditGameConfigPoorScore"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/etEditGameConfigGreatScore"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:text="@string/great_score_title"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/etEditGameConfigGreatScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etEditGameConfigGreatScore"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <EditText
+        android:id="@+id/etEditGameConfigGreatScore"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="28dp"
+        android:background="#00000000"
+        android:ems="10"
+        android:textColor="@color/white"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddNewGame"
+        tools:ignore="LabelFor"
+        android:importantForAutofill="no" />
+
+    <View
+        android:id="@+id/divExpectedGreat"
+        android:layout_width="140dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="-10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@+id/etEditGameConfigGreatScore"
+        app:layout_constraintStart_toStartOf="@+id/etEditGameConfigGreatScore"
+        app:layout_constraintTop_toBottomOf="@+id/etEditGameConfigGreatScore" />
+
+    <View
+        android:id="@+id/divExpectedGreatRed"
+        android:layout_width="140dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="-10dp"
+        android:background="@color/black"
+        android:backgroundTint="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/etEditGameConfigGreatScore"
+        app:layout_constraintStart_toStartOf="@+id/etEditGameConfigGreatScore"
+        app:layout_constraintTop_toBottomOf="@+id/etEditGameConfigGreatScore"
+        tools:visibility="gone" />
+
+    <View
+        android:id="@+id/divExpectedPoor"
+        android:layout_width="140dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="-10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@+id/etEditGameConfigPoorScore"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etEditGameConfigPoorScore"
+        app:layout_constraintTop_toBottomOf="@+id/etEditGameConfigPoorScore" />
+
+    <View
+        android:id="@+id/divExpectedPoorRed"
+        android:layout_width="140dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="-10dp"
+        android:background="@color/black"
+        android:backgroundTint="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/etEditGameConfigPoorScore"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etEditGameConfigPoorScore"
+        app:layout_constraintTop_toBottomOf="@+id/etEditGameConfigPoorScore"
+        tools:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnViewLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="128dp"
+        android:text="@string/btn_view_levels"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivGameTypeActIcon"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:contentDescription="@string/game_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_gametype_1" />
+
+    <ImageButton
+        android:id="@+id/ibChangeIcon"
+        android:layout_width="33dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="@string/btn_icon_change"
+        app:layout_constraintBottom_toTopOf="@+id/ivGameTypeActIcon"
+        app:layout_constraintEnd_toEndOf="@+id/divider38"
+        app:srcCompat="@drawable/ic_gametype_change" />
+
+    <ImageButton
+        android:id="@+id/ibCustomPhotoIcon"
+        android:layout_width="33dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="@string/btn_icon_change"
+        app:layout_constraintBottom_toTopOf="@+id/ivGameTypeActIcon"
+        app:layout_constraintStart_toStartOf="@+id/divider37"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <View
+        android:id="@+id/divider34"
+        android:layout_width="93dp"
+        android:layout_height="4dp"
+        android:background="@color/black"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toTopOf="@+id/ivGameTypeActIcon"
+        app:layout_constraintEnd_toEndOf="@+id/ivGameTypeActIcon"
+        app:layout_constraintStart_toStartOf="@+id/ivGameTypeActIcon" />
+
+    <View
+        android:id="@+id/divider35"
+        android:layout_width="93dp"
+        android:layout_height="4dp"
+        android:background="@color/black"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintEnd_toEndOf="@+id/ivGameTypeActIcon"
+        app:layout_constraintStart_toStartOf="@+id/ivGameTypeActIcon"
+        app:layout_constraintTop_toBottomOf="@+id/ivGameTypeActIcon" />
+
+    <View
+        android:id="@+id/divider37"
+        android:layout_width="4dp"
+        android:layout_height="93dp"
+        android:background="@color/black"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toTopOf="@+id/divider35"
+        app:layout_constraintEnd_toStartOf="@+id/ivGameTypeActIcon"
+        app:layout_constraintTop_toBottomOf="@+id/divider34" />
+
+    <View
+        android:id="@+id/divider38"
+        android:layout_width="4dp"
+        android:layout_height="93dp"
+        android:background="@color/black"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toTopOf="@+id/divider35"
+        app:layout_constraintStart_toEndOf="@+id/ivGameTypeActIcon"
+        app:layout_constraintTop_toBottomOf="@+id/divider34" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

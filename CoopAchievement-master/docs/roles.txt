@@ -1,0 +1,32 @@
+ITERATION ONE
+=============
+
+June: Scrum Master
+
+Ricky: Team Member
+
+Aneel: Repo Manager
+
+Teeya: Project Owner
+
+ITERATION TWO
+=============
+
+June: Product Owner
+
+Ricky: Repo Manager
+
+Aneel: Team Member
+
+Teeya: Scrum Master
+
+ITERATION THREE
+=============
+
+June: Team Member
+
+Ricky: Scrum Master
+
+Aneel: Project Owner
+
+Teeya: Repo Manager

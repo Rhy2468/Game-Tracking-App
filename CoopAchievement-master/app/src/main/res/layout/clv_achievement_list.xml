@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/item_achievement_lvl_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/game_icon"
+        android:maxWidth="80dp"
+        android:maxHeight="80dp"
+        app:srcCompat="@drawable/ic_gametype_1" />
+
+    <TextView
+        android:id="@+id/item_txt_achievement_min_score"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/item_txt_achievement_lvl"
+        android:layout_alignEnd="@+id/item_txt_achievement_lvl"
+
+        android:layout_alignBottom="@+id/item_achievement_lvl_icon"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/min_score_reach"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/item_txt_achievement_lvl"
+        android:layout_width="258dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_achievement_lvl_icon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="35dp"
+        android:text="@string/achievement_title"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvRankObtainedCount"
+        android:layout_width="46dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_txt_achievement_lvl"
+        android:layout_alignBottom="@+id/item_txt_achievement_min_score"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="13dp"
+        android:layout_toEndOf="@+id/item_achievement_lvl_icon"
+        android:text="@string/rank_count"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+</RelativeLayout>

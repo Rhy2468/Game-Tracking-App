@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/h"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/appbackground"
+    tools:context=".AddGameTypeActivity">
+
+    <TableLayout
+        android:id="@+id/tlAddGameTypeIconMatrix"
+        android:layout_width="370dp"
+        android:layout_height="370dp"
+        android:layout_above="@+id/tvGameNameTitle"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.202">
+
+    </TableLayout>
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="380dp"
+        android:layout_height="5dp"
+        android:layout_above="@+id/divider8"
+        android:layout_marginBottom="117dp"
+        android:background="@color/blue_700"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/divider6"
+        app:layout_constraintEnd_toEndOf="@+id/divider6"
+        app:layout_constraintStart_toStartOf="@+id/divider6" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="380dp"
+        android:layout_height="5dp"
+        android:layout_above="@+id/divider5"
+        android:layout_marginBottom="120dp"
+        android:background="@color/blue_500"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/tlAddGameTypeIconMatrix"
+        app:layout_constraintEnd_toEndOf="@+id/divider8"
+        app:layout_constraintStart_toStartOf="@+id/divider8" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="5dp"
+        android:layout_height="380dp"
+        android:layout_below="@+id/divider7"
+        android:layout_alignBottom="@+id/tlAddGameTypeIconMatrix"
+        android:layout_marginEnd="120dp"
+        android:background="@color/blue_500"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/divider10"
+        app:layout_constraintEnd_toStartOf="@+id/divider10"
+        app:layout_constraintTop_toTopOf="@+id/divider10" />
+
+    <View
+        android:id="@+id/divider10"
+        android:layout_width="5dp"
+        android:layout_height="380dp"
+        android:layout_below="@+id/divider7"
+        android:layout_alignBottom="@+id/tlAddGameTypeIconMatrix"
+        android:layout_marginEnd="120dp"
+        android:layout_toEndOf="@+id/divider9"
+        android:background="@color/blue_500"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/divider12"
+        app:layout_constraintEnd_toEndOf="@+id/tlAddGameTypeIconMatrix"
+        app:layout_constraintTop_toTopOf="@+id/divider12" />
+
+    <View
+        android:id="@+id/divider11"
+        android:layout_width="5dp"
+        android:layout_height="380dp"
+        android:layout_below="@+id/divider7"
+        android:layout_alignBottom="@+id/tlAddGameTypeIconMatrix"
+        android:layout_toEndOf="@+id/divider10"
+        android:background="@color/blue_500"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toTopOf="@+id/divider8"
+        app:layout_constraintEnd_toStartOf="@+id/tlAddGameTypeIconMatrix"
+        app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+    <View
+        android:id="@+id/divider12"
+        android:layout_width="5dp"
+        android:layout_height="380dp"
+        android:layout_below="@+id/divider7"
+        android:layout_alignBottom="@+id/tlAddGameTypeIconMatrix"
+        android:layout_toEndOf="@+id/divider11"
+        android:background="@color/blue_500"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toTopOf="@+id/divider8"
+        app:layout_constraintStart_toEndOf="@+id/tlAddGameTypeIconMatrix"
+        app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="380dp"
+        android:layout_height="5dp"
+        android:layout_above="@+id/divider6"
+        android:background="@color/blue_500"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toTopOf="@+id/tlAddGameTypeIconMatrix"
+        app:layout_constraintEnd_toEndOf="@+id/tlAddGameTypeIconMatrix"
+        app:layout_constraintStart_toStartOf="@+id/tlAddGameTypeIconMatrix" />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="380dp"
+        android:layout_height="5dp"
+        android:layout_alignBottom="@+id/tlAddGameTypeIconMatrix"
+        android:background="@color/blue_500"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintEnd_toEndOf="@+id/tlAddGameTypeIconMatrix"
+        app:layout_constraintStart_toStartOf="@+id/tlAddGameTypeIconMatrix"
+        app:layout_constraintTop_toBottomOf="@+id/tlAddGameTypeIconMatrix" />
+
+
+    <EditText
+        android:id="@+id/etAddGameTypeExpectedHigh"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/high_number_hint"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="#C0C0C0"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etAddGameTypeExpectedLow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider20"
+        app:layout_constraintVertical_bias="0.732" />
+
+    <EditText
+        android:id="@+id/etAddGameTypeExpectedLow"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:hint="@string/low_number_hint"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="#C0C0C0"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etAddGameTypeExpectedHigh"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etAddGameTypeExpectedHigh"
+        app:layout_constraintTop_toBottomOf="@+id/divider20"
+        app:layout_constraintVertical_bias="0.726" />
+
+    <TextView
+        android:id="@+id/tvExpectedGreatScoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:text="@string/enter_expected_great_score"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/etAddGameTypeExpectedHigh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etAddGameTypeExpectedHigh" />
+
+    <TextView
+        android:id="@+id/tvExpectedPoorScoreTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="32dp"
+        android:text="@string/enter_expected_poor_score"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/etAddGameTypeExpectedLow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etAddGameTypeExpectedLow" />
+
+    <TextView
+        android:id="@+id/tvSelectGameIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/divider7"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/select_your_game_icon"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tlAddGameTypeIconMatrix"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <View
+        android:id="@+id/divider20"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider8"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+<!--    android:background="?android:attr/listDivider"-->
+
+    <ImageView
+        android:id="@+id/ivAddGameTypeSelectedImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/game_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/divider20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider20"
+        app:srcCompat="@drawable/ic_gametype_1" />
+
+    <EditText
+        android:id="@+id/etAddGameTypeGameName"
+        android:layout_width="158dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/ivAddGameTypeSelectedImage"
+        android:ems="10"
+        android:hint="@string/ex_chess"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:maxLength="15"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/divider22"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toEndOf="@+id/ivAddGameTypeSelectedImage" />
+
+    <TextView
+        android:id="@+id/tvGameNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etAddGameTypeGameName"
+        android:layout_alignParentEnd="true"
+        android:text="@string/enter_game_name"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etAddGameTypeGameName"
+        app:layout_constraintEnd_toEndOf="@+id/etAddGameTypeGameName"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="@+id/etAddGameTypeGameName"
+        app:layout_constraintTop_toBottomOf="@+id/divider23" />
+
+    <View
+        android:id="@+id/divider22"
+        android:layout_width="68dp"
+        android:layout_height="4dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintEnd_toEndOf="@+id/ivAddGameTypeSelectedImage"
+        app:layout_constraintStart_toStartOf="@+id/ivAddGameTypeSelectedImage"
+        app:layout_constraintTop_toBottomOf="@+id/ivAddGameTypeSelectedImage" />
+
+    <View
+        android:id="@+id/divider23"
+        android:layout_width="68dp"
+        android:layout_height="4dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toTopOf="@+id/ivAddGameTypeSelectedImage"
+        app:layout_constraintEnd_toEndOf="@+id/ivAddGameTypeSelectedImage"
+        app:layout_constraintStart_toStartOf="@+id/ivAddGameTypeSelectedImage" />
+
+    <View
+        android:id="@+id/divider24"
+        android:layout_width="4dp"
+        android:layout_height="66dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAddGameTypeSelectedImage"
+        app:layout_constraintStart_toEndOf="@+id/ivAddGameTypeSelectedImage"
+        app:layout_constraintTop_toTopOf="@+id/ivAddGameTypeSelectedImage" />
+
+    <View
+        android:id="@+id/divider25"
+        android:layout_width="4dp"
+        android:layout_height="66dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAddGameTypeSelectedImage"
+        app:layout_constraintEnd_toStartOf="@+id/ivAddGameTypeSelectedImage"
+        app:layout_constraintTop_toTopOf="@+id/ivAddGameTypeSelectedImage" />
+
+    <View
+        android:id="@+id/divider16"
+        android:layout_width="230dp"
+        android:layout_height="5dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tvSelectGameIcon"
+        app:layout_constraintStart_toStartOf="@+id/tvSelectGameIcon"
+        app:layout_constraintTop_toBottomOf="@+id/tvSelectGameIcon" />
+
+    <Button
+        android:id="@+id/btn_add_game_type_camera"
+        android:layout_width="103dp"
+        android:layout_height="62dp"
+        android:text="@string/take_a_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/divider22"
+        app:layout_constraintEnd_toStartOf="@+id/ivAddGameTypeSelectedImage"
+        app:layout_constraintStart_toStartOf="@+id/divider20"
+        app:layout_constraintTop_toTopOf="@+id/divider23" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
